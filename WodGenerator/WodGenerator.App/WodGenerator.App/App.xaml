@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="WodGenerator.App.App">
+    
+    <Application.Resources>
+
+        <Style TargetType="{x:Type Image}" x:Key="background">
+            <Setter Property="Source" Value="background"/>
+        </Style>
+
+        <Style TargetType="{x:Type BoxView}" x:Key="opacidade_maior">
+            <Setter Property="BackgroundColor" Value="Black"/>
+            <Setter Property="Opacity" Value="0.75"/>
+        </Style>
+
+        <Style TargetType="{x:Type BoxView}" x:Key="opacidade_menor">
+            <Setter Property="BackgroundColor" Value="#Black"/>
+            <Setter Property="Opacity" Value="0.4"/>
+        </Style>
+
+        <Style TargetType="{x:Type BoxView}" x:Key="boxview_background">
+            <Setter Property="BackgroundColor" Value="#E9E9E9"/>
+        </Style>
+
+        <Style TargetType="{x:Type BoxView}" x:Key="boxview_separadorlinha">
+            <Setter Property="BackgroundColor" Value="#D3D3D3"/>
+            <Setter Property="VerticalOptions" Value="Start"/>
+            <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+            <Setter Property="HeightRequest" Value="1"/>
+        </Style>
+        <Style TargetType="{x:Type Label}">
+            <Setter Property="TextColor" Value="White"/>
+        </Style>
+
+        <Style TargetType="{x:Type Label}" x:Key="label_configuracoes">
+            <Setter Property="TextColor" Value="#707070"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="Margin" Value="10,0,0,0"/>
+            <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+            <Setter Property="VerticalTextAlignment" Value="Center"/>
+        </Style>
+
+        <Style TargetType="{x:Type Label}" x:Key="label_temporizador">
+            <Setter Property="TextColor" Value="#707070"/>
+            <Setter Property="FontSize" Value="22"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="Margin" Value="10,30,0,0"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="VerticalTextAlignment" Value="Center"/>
+        </Style>
+
+        <Style TargetType="{x:Type Label}" x:Key="texto_titulo">
+            <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="TextColor" Value="White"/>
+        </Style>
+
+        <Style TargetType="{x:Type Label}" x:Key="texto_titulo_tipos">
+            <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+        </Style>
+
+        <Style TargetType="{x:Type Label}" x:Key="texto_subtitulo">
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="TextColor" Value="Black"/>
+        </Style>
+
+        <Style TargetType="{x:Type Label}" x:Key="texto_listview_titulo">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="TextColor" Value="Black"/>
+        </Style>
+
+        <Style TargetType="{x:Type Label}" x:Key="texto_padrao">
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="TextColor" Value="Black"/>
+        </Style>
+
+        <Style TargetType="{x:Type Image}" x:Key="icon_image">
+            <Setter Property="HeightRequest" Value="35"/>
+            <Setter Property="WidthRequest" Value="35"/>
+        </Style>
+
+        <Style TargetType="{x:Type Image}" x:Key="icon_image_configuracoes">
+            <Setter Property="HeightRequest" Value="35"/>
+            <Setter Property="WidthRequest" Value="35"/>
+            <Setter Property="HorizontalOptions" Value="Start"/>
+        </Style>
+
+        <Style TargetType="{x:Type ImageButton}">
+            <Setter Property="HeightRequest" Value="35"/>
+            <Setter Property="WidthRequest" Value="35"/>
+            <Setter Property="BackgroundColor" Value="Transparent"/>
+        </Style>
+
+        <Style TargetType="{x:Type Entry}" x:Key="entry_autenticacao">
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="HeightRequest" Value="45"/>
+            <Setter Property="BackgroundColor" Value="Transparent"/>
+            <Setter Property="PlaceholderColor" Value="White"/>
+        </Style>
+
+        <Style TargetType="{x:Type Button}" x:Key="button_gerais">
+            <Setter Property="CornerRadius" Value="25"/>
+            <Setter Property="BorderWidth" Value="1"/>
+            <Setter Property="BackgroundColor" Value="#1D9F18"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="HorizontalOptions" Value="Fill"/>
+            <Setter Property="Margin" Value="40,10,40,10"/>
+        </Style>
+
+        <Style TargetType="{x:Type Button}" x:Key="button_abas" >
+            <Setter Property="CornerRadius" Value="0"/>
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="Margin" Value="0"/>
+        </Style>
+
+        <Style TargetType="{x:Type Switch}">
+            <Setter Property="IsToggled" Value="False"/>
+            <Setter Property="HorizontalOptions" Value="EndAndExpand"/>
+        </Style>
+
+        <Style TargetType="{x:Type StackLayout}" x:Key="stacklayout_configuracoes">
+            <Setter Property="Orientation" Value="Horizontal"/>
+            <Setter Property="Padding" Value="10,20,0,20"/>
+        </Style>
+
+    </Application.Resources>
+</Application>

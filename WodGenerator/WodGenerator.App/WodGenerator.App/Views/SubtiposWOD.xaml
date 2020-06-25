@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="WodGenerator.App.Views.SubtiposWOD"
+             BackgroundColor="Black">
+
+    <ContentPage.Content>
+        <Grid VerticalOptions="FillAndExpand" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Image x:Name="ImageBackground" Style="{StaticResource background}"/>
+            <BoxView Style="{StaticResource opacidade_menor}"/>
+
+            <Grid Grid.Row="0" VerticalOptions="FillAndExpand" RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.Row="0" x:Name="LabelTituloSubTipoWOD" Style="{StaticResource texto_titulo_tipos}" Margin="0, 8, 0, 8"/>
+                <BoxView Grid.Row="1" Style="{StaticResource boxview_background}"/>
+
+                <Grid Grid.Row="1" RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Label x:Name="LabelEscolhaSubTipoWOD" Grid.Row="0" Style="{StaticResource texto_subtitulo}" Margin="10" />
+
+                    <ListView Grid.Row="1" x:Name="ListViewSubTiposWOD" ItemTapped="ListViewSubTiposWOD_ItemTapped" SelectionMode="None" HasUnevenRows="true" ItemsSource="{Binding SubtiposWODs}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid Padding="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="12"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <BoxView x:Name="BoxViewCorTipoWOD" Grid.Row="0" Grid.Column="0" Grid.RowSpan="5" BackgroundColor="{Binding CorTipoWOD}" />
+                                        <Label x:Name="LabelNomeSubTipoWOD" Grid.Column="1" Grid.Row="0" Style="{StaticResource texto_listview_titulo}" Text="{Binding Nome}"/>
+                                        <Label x:Name="LabelDescricaoSubTipoWOD" Grid.Column="1" Grid.Row="1" Style="{StaticResource texto_padrao}" Text="{Binding Descricao}"/>
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+                    <Label x:Name="LabelFaleConosco" Grid.Row="2" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand" Margin="10" Text="O tipo de WOD que deseja criar não está disponível? Escreva-nos: suporte.wodgenerator@gmail.com" FontSize="18" TextColor="Black"/>
+
+                </Grid>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

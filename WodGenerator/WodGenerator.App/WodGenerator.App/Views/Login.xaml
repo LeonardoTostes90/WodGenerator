@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="WodGenerator.App.Views.Login"
+             BackgroundColor="Black">
+    
+    <ContentPage.Content>
+        <Grid VerticalOptions="FillAndExpand" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Image x:Name="ImageBackground" Style="{StaticResource background}"/>
+            <BoxView Style="{StaticResource opacidade_maior}"/>
+            
+            <Grid Grid.Row="0">
+                    <Grid VerticalOptions="FillAndExpand" RowSpacing="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="4*" />
+                            <RowDefinition Height="5*" />
+                            <RowDefinition Height="2*" />
+                        </Grid.RowDefinitions>
+
+                    <Label Grid.Row="0" x:Name="LabelTitulo"  Text="WOD GENERATOR" Style="{StaticResource texto_titulo}" Margin="20" />
+
+                    <StackLayout Grid.Row="1">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="15, 0, 15, 0">
+                            <Image Source="icon_usuario.png" Style="{StaticResource icon_image}" />
+                            <Entry x:Name="EntryEmail" Style="{StaticResource entry_autenticacao}" Keyboard="Email" HorizontalOptions="FillAndExpand" Placeholder="Informe o seu e-mail"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="15, 15, 15, 0">
+                            <Image Source="icon_senha.png" Style="{StaticResource icon_image}" />
+                            <Entry x:Name="EntrySenha" Style="{StaticResource entry_autenticacao}" IsPassword="True" HorizontalOptions="FillAndExpand" Placeholder="Informe a sua senha"/>
+                        </StackLayout>
+
+                        <Button x:Name="ButtonLogin" Style="{StaticResource button_gerais}" Text="ENTRAR" Clicked="ButtonLogin_Clicked"/>
+
+                        <Label x:Name="LabelRedefinirSenha" Text="Esqueceu a senha? Clique aqui" HorizontalOptions="CenterAndExpand" Margin="15"/>
+                    </StackLayout>
+
+                    <Label Grid.Row="2" x:Name="LabelCadastrarUsuario" Text="Não possui conta? Cadastre-se" HorizontalOptions="CenterAndExpand"/>
+                </Grid>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

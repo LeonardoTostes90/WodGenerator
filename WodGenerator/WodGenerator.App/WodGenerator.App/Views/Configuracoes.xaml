@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="WodGenerator.App.Views.Configuracoes"
+             BackgroundColor="Black">
+    
+    <ContentPage.Content>
+        <Grid VerticalOptions="FillAndExpand" RowSpacing="0" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Image x:Name="ImageBackground" Style="{StaticResource background}"/>
+            <BoxView Style="{StaticResource opacidade_menor}"/>
+
+            <Grid Grid.Row="0">
+                <Grid VerticalOptions="FillAndExpand" RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="0" x:Name="LabelTituloConfiguracoes" Style="{StaticResource texto_titulo}" Text="Configurações" Margin="0, 8, 0, 8" />
+                    <BoxView Grid.Row="1" Style="{StaticResource boxview_background}"/>
+
+                    <Grid Grid.Row="1" RowSpacing="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <StackLayout Grid.Row="0">
+                            <StackLayout  Style="{StaticResource stacklayout_configuracoes}">
+                                <Image Source="icon_background_preto.png" Style="{StaticResource icon_image_configuracoes}"/>
+                                <Label x:Name="LabelImagemFundo" Text="Imagem de Fundo" Style="{StaticResource label_configuracoes}"/>
+                                <Switch x:Name="SwitchBackground"/>
+                            </StackLayout>
+                            <BoxView Style="{StaticResource boxview_separadorlinha}"/>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="1">
+                            <StackLayout Style="{StaticResource stacklayout_configuracoes}">
+                                <Image Source="icon_equipamentos_habilidades_preto" Style="{StaticResource icon_image_configuracoes}"/>
+                                <Label x:Name="LabelEquipamentosHabilidades" Style="{StaticResource label_configuracoes}">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="Alterar equipamentos e habilidades" >
+                                                <Span.GestureRecognizers>
+                                                    <TapGestureRecognizer Command="{Binding ClickLogFavoritosCommand}"/>
+                                                </Span.GestureRecognizers>
+                                            </Span>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                            </StackLayout>
+                            <BoxView Style="{StaticResource boxview_separadorlinha}"/>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="2" Spacing="0">
+                            <Grid Grid.Row="2" ColumnSpacing="1" >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Button Grid.Column="0" VerticalOptions="FillAndExpand" HorizontalOptions="Fill" x:Name="ButtonLibras" Style="{StaticResource button_abas}" Text="Libras (lbs)" Clicked="ButtonLibras_Clicked"/>
+                                <Button Grid.Column="1" VerticalOptions="FillAndExpand" HorizontalOptions="Fill" x:Name="ButtonQuilo" Style="{StaticResource button_abas}" Text="Quilo (kg)" Clicked="ButtonQuilo_Clicked"/>
+                            </Grid>
+                            <BoxView Style="{StaticResource boxview_separadorlinha}"/>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="3">
+                            <Label x:Name="LabelConfiguracoesTemporizador" Grid.Row="3" Text="Configurações do temporizador" Style="{StaticResource label_temporizador}"/>
+                            <BoxView Style="{StaticResource boxview_separadorlinha}"/>
+
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="4">
+                            <StackLayout Style="{StaticResource stacklayout_configuracoes}">
+                                <Image Source="icon_som_preto.png" Style="{StaticResource icon_image_configuracoes}"/>
+                                <Label x:Name="LabelSom" Text="Som" Style="{StaticResource label_configuracoes}"/>
+                                <Switch x:Name="SwitchSom"/>
+                            </StackLayout>
+                            <BoxView Style="{StaticResource boxview_separadorlinha}"/>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="5">
+                            <StackLayout Style="{StaticResource stacklayout_configuracoes}">
+                                <Image Source="icon_voz_preto.png" Style="{StaticResource icon_image_configuracoes}"/>
+                                <Label x:Name="LabelVoz" Text="Voz" Style="{StaticResource label_configuracoes}"/>
+                                <Switch x:Name="SwitchVoz"/>
+                            </StackLayout>
+                            <BoxView Style="{StaticResource boxview_separadorlinha}"/>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="6">
+                            <StackLayout Style="{StaticResource stacklayout_configuracoes}">
+                                <Image Source="icon_lembrete_preto.png" Style="{StaticResource icon_image_configuracoes}"/>
+                                <Label x:Name="LabelLembrete" Text="Lembrete" Style="{StaticResource label_configuracoes}"/>
+                                <Switch x:Name="SwitchLembrete"/>
+                            </StackLayout>
+                            <BoxView Style="{StaticResource boxview_separadorlinha}"/>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="7">
+                            <StackLayout Style="{StaticResource stacklayout_configuracoes}">
+                                <Image Source="icon_seta_cima_preto.png" Style="{StaticResource icon_image_configuracoes}"/>
+                                <Label x:Name="LabelContador" Text="Contador (AMRAP &amp; EMOM)" Style="{StaticResource label_configuracoes}"/>
+                                <Switch x:Name="SwitchContador"/>
+                            </StackLayout>
+                            <BoxView Style="{StaticResource boxview_separadorlinha}"/>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="8">
+                            <StackLayout Style="{StaticResource stacklayout_configuracoes}">
+                                <Image Source="icon_contagem_regressiva_preto.png" Style="{StaticResource icon_image_configuracoes}"/>
+                                <Label x:Name="LabelContagemRegressiva" Text="Tempo de contagem regressiva" Style="{StaticResource label_configuracoes}"/>
+                                <Switch x:Name="SwitchContagemRegressiva"/>
+                            </StackLayout>
+                            <BoxView Style="{StaticResource boxview_separadorlinha}"/>
+                        </StackLayout>
+
+                           
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="WodGenerator.App.Views.Default"
+             BackgroundColor="Black"
+             NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Content>
+        <Grid VerticalOptions="FillAndExpand" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Image x:Name="ImageBackground" Style="{StaticResource background}"/>
+            <BoxView Style="{StaticResource opacidade_maior}"/>
+
+            <Grid Grid.Row="0">
+                <Grid VerticalOptions="FillAndExpand" RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="4*"/>
+                        <RowDefinition Height="3*"/>
+                        <RowDefinition Height="3*"/>
+                    </Grid.RowDefinitions>
+
+                    <StackLayout Grid.Row="0">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Padding="10">
+                            <ImageButton x:Name="ImageButtonCriaWod" Source="icon_wods" Clicked="ImageButtonCriaWod_Clicked" Margin="0,0,15,0"/>
+                            <ImageButton x:Name="ImageButtonConfiguracoes" Source="icon_configuracoes" Clicked="ImageButtonConfiguracoes_Clicked" HorizontalOptions="FillAndExpand" />
+                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Center">
+                        <ImageButton x:Name="ImageButtonGo" Source="icon_setas" Clicked="ImageButtonGo_Clicked" WidthRequest="210" HeightRequest="210"/>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="1" VerticalOptions="CenterAndExpand" HorizontalOptions="Center">
+                        <Label x:Name="LabelGo" Text="GO" FontSize="70" />
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="2"  Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                        <Image Source="icon_log_favorito" Style="{StaticResource icon_image}" Margin="0,0,6,0"/>
+                        <Label HorizontalOptions="FillAndExpand" Margin="0,6,0,0" Style="{StaticResource texto_titulo}">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="LOG &amp; FAVORITOS" >
+                                        <Span.GestureRecognizers>
+                                            <TapGestureRecognizer x:Name="TapGestureRecognizerLogFavoritos" Tapped="TapGestureRecognizerLogFavoritos_Tapped"/>
+                                        </Span.GestureRecognizers>
+                                    </Span>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </StackLayout>
+                </Grid>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

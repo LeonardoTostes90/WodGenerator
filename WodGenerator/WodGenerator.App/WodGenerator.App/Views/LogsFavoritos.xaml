@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="WodGenerator.App.Views.LogsFavoritos"
+             BackgroundColor="Black">
+    
+    <ContentPage.Content>
+        <Grid VerticalOptions="FillAndExpand" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Image x:Name="ImageBackground" Style="{StaticResource background}"/>
+            <BoxView Style="{StaticResource opacidade_menor}"/>
+
+            <Grid Grid.Row="0">
+                <Grid VerticalOptions="FillAndExpand" RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="0" x:Name="LabelTituloProjeto" Style="{StaticResource texto_titulo}" Text="WOD GENERATOR" Margin="0, 8, 0, 8" />
+                    <BoxView Grid.Row="1" BackgroundColor="#E9E9E9"/>
+
+                    <Grid Grid.Row="1" RowSpacing="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid Grid.Row="0" ColumnSpacing="1" Padding="60,40,60,40" >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Button Grid.Column="0" VerticalOptions="FillAndExpand" HorizontalOptions="Fill" x:Name="ButtonLogs" Style="{StaticResource button_abas}" Text="WOD Log" Clicked="ButtonLogs_Clicked"/>
+                            <Button Grid.Column="1" VerticalOptions="FillAndExpand" HorizontalOptions="Fill" x:Name="ButtonFavoritos" Style="{StaticResource button_abas}" Text="Favoritos" Clicked="ButtonFavoritos_Clicked"/>
+                        </Grid>
+
+                        <!--<ListView Grid.Row="1" x:Name="ListViewLogs" ItemTapped="ListViewLogs_ItemTapped" SelectionMode="None" HasUnevenRows="true" ItemsSource="{Binding TiposWOD}" IsVisible="True">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <Grid Padding="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="12"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <BoxView x:Name="BoxViewCorTipoWOD" Grid.Row="0" Grid.Column="0" Grid.RowSpan="5" BackgroundColor="{Binding CorTipoWOD}" />
+                                            <Label x:Name="LabelNomeTipoWOD" Grid.Column="1" Grid.Row="0" Style="{StaticResource texto_listview_titulo}" Text="{Binding Nome}"/>
+                                            <Label x:Name="LabelDescricaoTipoWOD" Grid.Column="1" Grid.Row="1" Style="{StaticResource texto_padrao}" Text="{Binding Descricao}"/>
+                                        </Grid>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+
+                        <ListView Grid.Row="1" x:Name="ListViewTiposWOD" ItemTapped="ListViewTiposWOD_ItemTapped" SelectionMode="None" HasUnevenRows="true" ItemsSource="{Binding TiposWOD}" IsVisible="False">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <Grid Padding="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="12"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <BoxView x:Name="BoxViewCorTipoWOD" Grid.Row="0" Grid.Column="0" Grid.RowSpan="5" BackgroundColor="{Binding CorTipoWOD}" />
+                                            <Label x:Name="LabelNomeTipoWOD" Grid.Column="1" Grid.Row="0" Style="{StaticResource texto_listview_titulo}" Text="{Binding Nome}"/>
+                                            <Label x:Name="LabelDescricaoTipoWOD" Grid.Column="1" Grid.Row="1" Style="{StaticResource texto_padrao}" Text="{Binding Descricao}"/>
+                                        </Grid>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>-->
+
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
