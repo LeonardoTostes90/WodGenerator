@@ -1,0 +1,116 @@
+{
+	"atletas" : [
+		{
+			"id" : 1,
+			"email" : "leonardo.tostes2010@gmail.com",
+			"senha" : "lfts"
+		},
+		{
+			"id" : 2,
+			"email" : "julia.tostes@gmail.com",
+			"senha" : "jmts"
+		}
+	],
+	"tiposWOD" : [
+		{
+			"id" : 1,
+			"nome" : "AMRAP",
+			"descricao" : "O maior número possível de rounds dentro de um período determinado"
+		},
+		{
+			"id" : 2,
+			"nome" : "EMOM",
+			"descricao" : "WOD por tempo"
+		},
+		{
+			"id" : 3,
+			"nome" : "FOR TIME",
+			"descricao" : "WOD de 1 (um) minuto"
+		},
+		{
+			"id" : 4,
+			"nome" : "TABATA",
+			"descricao" : "WOD intervaldo (Atividade x Descanso)"
+		}
+	],
+	"subtiposWOD" : [
+		{
+			"WODTipo" : 1,
+			"id" : 1,
+			"nome" : "AMRAP",
+			"descricao" : "O maior número possível de rounds dentro de um período determinado"	
+		},
+		{
+			"WODTipo" : 1,
+			"id" : 2,
+			"nome" : "AMReps",
+			"descricao" : "O maior número possível de repetições dentro de um período determinado"	
+		},
+		{
+			"WODTipo" : 1,
+			"id" : 3,
+			"nome" : "AMRAP Repeats",
+			"descricao" : "Repetir o AMRAP dentro de uma quantidade de vezes determinada"	
+		},
+		{
+			"WODTipo" : 1,
+			"id" : 4,
+			"nome" : "AMRAP With Buy-In",
+			"descricao" : "Realizar uma determinada tarefa antes de iniciar um AMRAP"	
+		},
+		{
+			"WODTipo" : 2,
+			"id" : 1,
+			"nome" : "Vários movimentos por intervalo",
+			"descricao" : "Um ou vários movimentos por intervalo"	
+		},
+		{
+			"WODTipo" : 2,
+			"id" : 2,
+			"nome" : "Movimentos alternados por intervalo",
+			"descricao" : "Alternar movimentos entre os intervalos do EMOM"	
+		},
+		{
+			"WODTipo" : 3,
+			"id" : 1,
+			"nome" : "For Time",
+			"descricao" : "Realizar o WOD no menor tempo possível"	
+		},
+		{
+			"WODTipo" : 3,
+			"id" : 2,
+			"nome" : "Rounds For Time",
+			"descricao" : "Realizar o WOD no menor tempo possível, levando em consideração a quantidade de rounds determinado"	
+		},
+		{
+			"WODTipo" : 3,
+			"id" : 3,
+			"nome" : "RFT: Variação de Repetições Idêntica (21-15-9)",
+			"descricao" : "Cada round tem as mesmas repetições de todos os movimentos"	
+		},
+		{
+			"WODTipo" : 3,
+			"id" : 4,
+			"nome" : "For Time Repeats",
+			"descricao" : "Repetir o For Time dentro de uma quantidade de vezes determinada"	
+		},
+		{
+			"WODTipo" : 3,
+			"id" : 5,
+			"nome" : "RFT: Com Tarefas (Buy-In, Buy-Out)",
+			"descricao" : "Realizar tarefa antes e/ou depois de completar todos os rounds do For Time"	
+		},
+		{
+			"WODTipo" : 4,
+			"id" : 1,
+			"nome" : "Tabata Padrão",
+			"descricao" : "Mesmo movimento para todos os rounds"	
+		},
+		{
+			"WODTipo" : 4,
+			"id" : 2,
+			"nome" : "Tabata Alternada",
+			"descricao" : "Alternar movimentos entre os rounds"	
+		}
+	]
+}
